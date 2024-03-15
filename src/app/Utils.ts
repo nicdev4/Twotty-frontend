@@ -7,7 +7,7 @@ export interface IUser{
 }
 
 export class ConfigData{
-  public server_uri = "https://api.nicdev.space";
+  public server_uri = "";
 }
 export class User implements IUser{
   first_name: string = "";
