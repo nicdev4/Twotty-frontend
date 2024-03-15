@@ -1,0 +1,21 @@
+<app-loading *ngIf="loading"></app-loading>
+<div class="login__container" *ngIf="!loading">
+  <div class="login__form">
+    <form method="POST" action="#" [formGroup]="login_form" (ngSubmit)="onSubmit()">
+      <div class="input-line">
+        <label>Логин</label>
+        <input type="email" formControlName="email" name="email" pattern="([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+" placeholder="Введите email">
+      </div>
+      <div class="input-line">
+        <label>Пароль</label>
+        <input type="password" formControlName="password" name="password" placeholder="Введите пароль">
+      </div>
+      <button id="submit-form">Войти</button>
+      <b id="error" class="error" *ngIf="error.enabled">{{error.text}}</b>
+    </form>
+  </div>
+  <div class="login__desc">
+    <h2>Откройте безграничный мир общения с <span>Twotty</span></h2>
+    <p>Создайте аккаунт, и вы сможете общаться с друзьями с помощью наших постов.</p>
+  </div>
+</div>

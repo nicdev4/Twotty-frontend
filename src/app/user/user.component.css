@@ -1,0 +1,218 @@
+.userprofile__content{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+.userprofile__container{
+  display: flex;
+  flex-direction: column;
+  width: 26%;
+  box-sizing: border-box;
+  padding: 24px 48px;
+  background: white;
+  border-radius: 12px;
+  margin: 0 auto auto 0;
+  position: relative;
+}
+.userprofile__container .change-photo-container{
+  margin: auto;
+  position: relative;
+  background: none;
+  border: none;
+  width: 96px;
+  height: 96px;
+  display: flex;
+  flex-direction: row;
+}
+.userprofile__container .change-photo-container .hidden-element{
+  margin: auto;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+  transition: 0.3s opacity;
+  width: 96px;
+  height: 96px;
+  border-radius: 100vw;
+  color: white;
+  display: flex;
+}
+.userprofile__container .change-photo-container:hover .hidden-element{
+  opacity: 1;
+}
+.userprofile__container .change-photo-container .hidden-element span{
+  margin: auto;
+  text-align: center;
+}
+.userprofile__container img{
+  margin: auto;
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 100vw;
+  left: 0;
+  top: 0;
+}
+.userprofile__container .name__container{
+  margin: 12px auto auto;
+  display: flex;
+  flex-direction: column;
+}
+.userprofile__container .name__container .name{
+  font-size: 24px;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.userprofile__container .name__container .username{
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #8f8f8f;
+}
+
+.userprofile__container .manage{
+  margin-top: 24px;
+  width: 100%;
+  display: flex;
+}
+
+.userprofile__container .manage .btn{
+  display: block;
+  width: max-content;
+  padding: 0.4em 1.3em;
+  text-decoration: none;
+  margin: auto;
+  background: rgba(243, 243, 243, 0.7);
+  border-radius: 0.3em;
+  color: black;
+}
+
+.userprofile__posts{
+  width: 72%;
+  display: flex;
+  flex-direction: column;
+}
+.userprofile__posts div:first-child{
+  margin-top: 0;
+}
+.userprofile__posts div{
+  margin-top: 12px;
+}
+.userprofile__posts .post-form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-sizing: border-box;
+  padding: 24px 24px;
+  border-radius: 12px;
+}
+.userprofile__posts .post-form textarea{
+  width: 100%;
+  min-height: 128px;
+  font-size: 20px;
+  text-align: left;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: 12px 24px;
+  border: 1px #dcdcdc solid;
+  resize: none;
+  border-radius: 6px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+}
+.userprofile__posts .post-form button{
+  margin-top: 12px;
+  padding: 0.6em 1.6em;
+  background: #e1fff2;
+  color: #01bd82;
+  border: none;
+  border-radius: 0.3em;
+  box-sizing: border-box;
+  font-size: 16px;
+  width: max-content;
+}
+.userprofile__posts .post-form .head{
+  width: 100%;
+  display: flex;
+  margin-bottom: 12px;
+}
+.userprofile__posts .post-form .head img{
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 100vw;
+}
+.userprofile__posts .post-form .head .username{
+  margin: auto auto auto 12px;
+  font-weight: 600;
+}
+.userprofile__posts .post-form .warning{
+  color: #e0e0e0;
+  margin-top: 24px;
+}
+.userprofile__posts .posts{
+  width: 100%;
+  background: white;
+  box-sizing: border-box;
+  padding: 24px 24px;
+  border-radius: 12px;
+}
+.userprofile__posts .posts .twot:first-child{
+  margin-top: 0;
+}
+.userprofile__posts .posts .centred-message{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 36px 5%;
+  text-align: center;
+  color: #bebebe;
+}
+.userprofile__posts .posts .twot{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 24px 24px;
+  background: white;
+  border: 1px #dcdcdc solid;
+  border-radius: 12px;
+  margin-top: 12px;
+}
+.userprofile__posts .posts .twot .head{
+  width: 100%;
+  display: flex;
+  margin-bottom: 6px;
+}
+.userprofile__posts .posts .twot .head img{
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 100vw;
+}
+.userprofile__posts .posts .twot .head .username{
+  margin: auto auto auto 12px;
+  font-weight: 600;
+  margin-right: 6px;
+}
+.userprofile__posts .posts .twot .head .date{
+  margin: auto;
+  margin-left: 12px;
+  color: #5c5c5c;
+}
+.userprofile__posts .body{
+  width: 100%;
+  padding-bottom: 9px;
+}
+.userprofile__posts .body .text{
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 0;
+}

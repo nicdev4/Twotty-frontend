@@ -1,0 +1,51 @@
+.home__twots{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 48px 36px;
+  border-radius: 12px;
+  width: 100%;
+  background: white;
+}
+.home__twots .twot:first-child{
+  margin-top: 0;
+}
+.home__twots .twot{
+  background: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 64px;
+}
+.home__twots .twot .head{
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+.home__twots .twot .head img{
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 100vw;
+}
+.home__twots .twot .head .username{
+  margin: auto;
+  margin-left: 12px;
+  margin-right: 6px;
+  font-weight: 600;
+}
+.home__twots .twot .head .date{
+  margin: auto;
+  margin-left: 6px;
+  color: #5c5c5c;
+}
+.home__twots .twot .body{
+  margin-top: 12px;
+}
+.home__twots .twot .body .text{
+  width: 100%;
+  font-size: 24px;
+  text-wrap: normal;
+  white-space: pre-wrap;
+}

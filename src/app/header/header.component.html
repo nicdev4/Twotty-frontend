@@ -1,0 +1,21 @@
+<header>
+  <div class="container">
+    <div class="header__logo">
+      <span><a routerLink="">Twotty</a></span>
+    </div>
+    <div class="header__navigation">
+      <ul>
+        <li><a href="/">Главная</a></li>
+      </ul>
+    </div>
+
+    <div class="header__profile">
+      <a *ngIf="is_auth" routerLink="/user" [queryParams]="{name: user?.username}" class="header__profile-content">
+        <img src="{{user?.getPhotoUrl(config.server_uri)}}">
+        <span>{{user?.username}}</span>
+      </a>
+      <a *ngIf="!is_auth" href="/login" class="header__btn">Вход</a>
+      <a *ngIf="!is_auth" href="/signup" class="header__btn colored">Создать аккаунт</a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,15 @@
+<app-loading *ngIf="loading"></app-loading>
+<div class="home__twots" *ngIf="!loading">
+  <div *ngFor="let twot of posts" class="twot">
+    <a routerLink="/user" [queryParams]="{name: twot.from_user?.username}" class="head">
+      <img src="{{config.server_uri}}{{twot.from_user?.photo}}"/>
+      <span class="username">{{twot.from_user?.username}}</span>
+      <span class="date">{{twot.date}}</span>
+    </a>
+    <div class="body">
+      <div class="text">
+        {{twot.text}}
+      </div>
+    </div>
+  </div>
+</div>

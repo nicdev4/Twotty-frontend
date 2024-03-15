@@ -1,0 +1,44 @@
+<app-loading *ngIf="loading"></app-loading>
+<div class="userprofile__content" *ngIf="!loading">
+  <div class="userprofile__container">
+    <img src="{{ user.getPhotoUrl(config.server_uri) }}"/>
+    <div class="name__container">
+      <span class="name">{{ user.first_name }} {{ user.last_name }}</span>
+      <span class="username">{{ username }}</span>
+    </div>
+    <div class="manage" *ngIf="is_owner">
+      <a class="btn" routerLink="/logout">Выход из аккаунта</a>
+    </div>
+  </div>
+  <div class="userprofile__posts">
+    <div class="post-form" *ngIf="is_owner">
+      <div class="head">
+        <img src="{{ user.getPhotoUrl(config.server_uri) }}"/>
+        <span class="username">{{ username }}</span>
+      </div>
+      <form [formGroup]="post_form" (ngSubmit)="postSubmit()">
+        <textarea id="twot-text" formControlName="text" placeholder="Начните вводить ваш невероятный твот." type="text"></textarea>
+        <button id="send">Отправить твот</button>
+        <span class="error" *ngIf="post_form_error.enabled">{{post_form_error.text}}</span>
+      </form>
+      <span class="warning"><b>Помните!</b> Все, что попадает в Twotty, остается в Twotty. Удалить пост невозможно!</span>
+    </div>
+    <div class="posts" *ngIf="twots.length > 0">
+      <div class="twot" *ngFor="let twot of twots">
+        <div class="head">
+          <img src="{{user.getPhotoUrl(config.server_uri)}}"/>
+          <span class="username">{{ username }}</span>
+          <span class="date">{{ twot.date }}</span>
+        </div>
+        <div class="body">
+          <div class="text">
+            {{ twot.text }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="posts" *ngIf="twots.length <= 0">
+      <span class="centred-message">Кажется, тут еще ничего нет ;(</span>
+    </div>
+  </div>
+</div>

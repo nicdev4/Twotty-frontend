@@ -1,0 +1,32 @@
+<div class="login__container">
+  <div class="login__form c">
+    <form method="POST" name="login-form" [formGroup]="signup_form" (ngSubmit)="onSubmit()">
+      <div class="input-line">
+        <label>Логин</label>
+        <input type="text" formControlName="username" placeholder="Введите имя пользователя">
+        <span class="error" *ngIf="input_errors.username.enabled">{{input_errors.username.text}}</span>
+      </div>
+      <div class="input-line">
+        <label>Почта</label>
+        <input type="email" formControlName="email" placeholder="Введите email">
+        <span class="error" *ngIf="input_errors.email.enabled">{{input_errors.email.text}}</span>
+      </div>
+      <div class="input-line">
+        <label>Имя</label>
+        <input type="text" formControlName="first_name" placeholder="Введите имя">
+        <span class="error" *ngIf="input_errors.first_name.enabled">{{input_errors.first_name.text}}</span>
+      </div>
+      <div class="input-line">
+        <label>Фамилия</label>
+        <input type="text" formControlName="last_name" placeholder="Введите фамилию">
+        <span class="error" *ngIf="input_errors.last_name.enabled">{{input_errors.last_name.text}}</span>
+      </div>
+      <div class="input-line">
+        <label>Пароль</label>
+        <input type="password" formControlName="password" placeholder="Введите пароль">
+      </div>
+      <button id="submit-form">Регистрация</button>
+      <b id="error" class="error" *ngIf="form_error.enabled">{{form_error.text}}</b>
+    </form>
+  </div>
+</div>
